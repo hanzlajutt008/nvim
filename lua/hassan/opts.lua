@@ -1,4 +1,3 @@
-vim.o.background="dark"
 vim.o.ai=true
 vim.o.ar=true
 vim.o.ch=2
@@ -24,11 +23,10 @@ vim.o.sta=true
 vim.o.sol=true
 vim.o.swapfile=false
 vim.o.tabstop=2
+vim.o.sw=2
 vim.o.ut=300
 vim.o.wrap=false
 vim.o.tgc=true
 vim.opt.path:append { '**' }
 vim.opt.wildignore:append { '*/node_modules/*', '*/vendor/*' }
 vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
-
-vim.cmd([[ colorscheme gruvbox ]])
