@@ -1,4 +1,4 @@
-vim.o.background="light"
+vim.o.background="dark"
 vim.o.ai=true
 vim.o.ar=true
 vim.o.ch=2
@@ -28,5 +28,6 @@ vim.o.swapfile=false
 vim.o.tabstop=2
 vim.o.ut=300
 vim.o.wrap=false
+vim.o.tgc=true
 
 vim.cmd([[ colorscheme gruvbox ]])
