@@ -1,4 +1,4 @@
-vim.o.background="light"
+vim.o.background="dark"
 vim.o.ai=true
 vim.o.ar=true
 vim.o.ch=2
@@ -15,8 +15,6 @@ vim.o.is=true
 vim.o.mis=10
 vim.o.mouse="a"
 vim.o.nu=true
-vim.opt.path:append { '**' }
-vim.opt.wildignore:append { '*/node_modules/*', '*/vendor/*' }
 vim.o.rnu=true
 vim.o.so=10
 vim.o.scl="yes"
@@ -28,5 +26,9 @@ vim.o.swapfile=false
 vim.o.tabstop=2
 vim.o.ut=300
 vim.o.wrap=false
+vim.o.tgc=true
+vim.opt.path:append { '**' }
+vim.opt.wildignore:append { '*/node_modules/*', '*/vendor/*' }
+vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
 
 vim.cmd([[ colorscheme gruvbox ]])
