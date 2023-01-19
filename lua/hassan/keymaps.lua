@@ -1,3 +1,4 @@
+vim.g.mapleader = ' '
 local set = vim.keymap.set
 
 set('n', '<leader>sf', ':find ')
