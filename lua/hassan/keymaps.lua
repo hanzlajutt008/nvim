@@ -1,12 +1,17 @@
 vim.g.mapleader = ' '
-local set = vim.keymap.set
+local s = vim.keymap.set
 
-set('n', '<leader>sf', ':find ')
+s('n', '<leader>sf', ':find ')
+s('v', 'J', [[:move '>+1<CR>gv=gv]])
+s('v', 'K', [[:move '<-2<CR>gv=gv]])
 
--- This is something funny that I want to do here
--- Basically I want my p to paste from clipboard
--- and leader p to paste from last deletion
-set('n', 'p', '"0p')
-set('n', 'P', '"0P')
-set('n', '<leader>p', 'p')
-set('n', '<leader>P', 'P')
+s('n', 'J', 'mzJ`z')
+s('n', '<C-d>', '<C-d>zz')
+s('n', '<C-u>', '<C-u>zz')
+s('n', 'n', 'nzzzv')
+s('n', 'N', 'Nzzzv')
+
+s('n', 'Q', '<nop>')
+s('n', '<leader>fb', vim.lsp.buf.format)
+
+s('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<left><left><left>]])

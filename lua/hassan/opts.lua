@@ -1,5 +1,11 @@
 local o = vim.opt
 
+local has = function (x)
+  return vim.fn.has(x) == 1
+end
+
+local is_windows = has('win32')
+
 o.autoindent = true
 o.autoread = true
 o.cmdheight = 2
@@ -20,6 +26,13 @@ o.smartcase = true
 o.smartindent = true
 o.smarttab = true
 o.swapfile = false
+o.backup = false
+if is_windows then
+  o.undodir = os.getenv('UserProfile') .. '/.vim/undodir'
+else
+  o.undodir = os.getenv('HOME') .. '/.vim/undodir'
+end
+o.undofile = true
 o.tabstop = 2
 o.shiftwidth = 2
 o.updatetime = 300
