@@ -15,3 +15,5 @@ s('n', 'Q', '<nop>')
 s('n', '<leader>fb', vim.lsp.buf.format)
 
 s('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<left><left><left>]])
+
+s('n', '<leader>fe', vim.cmd.Ex)
