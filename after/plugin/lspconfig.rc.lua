@@ -36,7 +36,7 @@ local on_attach = function(client, bufnr)
 end
 
 local servers = {
-	'intelephense', 'sumneko_lua', 'tsserver',
+	'intelephense', 'sumneko_lua', 'tsserver', 'eslint',
 }
 
 local server_settings = {
@@ -49,6 +49,7 @@ local server_settings = {
 		}
 	},
 	tsserver = {},
+  eslint = {},
 }
 
 for _, lsp in ipairs(servers) do
